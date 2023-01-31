@@ -38,3 +38,5 @@ def resta():
 
 suma()
 resta()
+
+#Decoradores 2 Con parametros 
