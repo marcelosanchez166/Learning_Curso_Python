@@ -17,26 +17,55 @@
 #Ejemplo1
 
 #Funcion (A) Decorador
+# def Funcion_decorador(recibe_funcion):
+#     def Funcion_interior():#Funcion C
+#         #Funciones adicionales que decoran 
+#         print("Vamos a realizar un calculo: ")
+
+#         recibe_funcion()
+
+#         #Acciones adicionales que decoran 
+#         print("Hemos terminado el calculo")
+#     return Funcion_interior
+
+# @Funcion_decorador
+# def suma():
+#     print(15+20)
+
+
+# def resta():
+#     print(30-10)
+
+# suma()
+# resta()
+
+#Decoradores 2 Con parametros 
+#Ejemplo2
+
+#Funcion (A) Decorador
 def Funcion_decorador(recibe_funcion):
-    def Funcion_interior():#Funcion C
+    def Funcion_interior(*args, **kwargs):#Funcion C 
         #Funciones adicionales que decoran 
         print("Vamos a realizar un calculo: ")
 
-        recibe_funcion()
+        recibe_funcion(*args,**kwargs)
 
         #Acciones adicionales que decoran 
         print("Hemos terminado el calculo")
     return Funcion_interior
 
 @Funcion_decorador
-def suma():
-    print(15+20)
+def suma(num1,num2):#Para que se le pueda pasar parametros a esta funcion debo poner *args en la Funcion_interior y en la funcion recibe_funcion
+    print(num1+num2)
 
 
-def resta():
-    print(30-10)
+def resta(num1,num2):#Para que se le pueda pasar parametros a esta funcion debo poner *args en la Funcion_interior y en la funcion recibe_funcion
+    print(num1-num2)
 
-suma()
-resta()
+@Funcion_decorador
+def potencia(base,valor):#Para que se le pueda pasar parametros a esta funcion debo poner **kwargs en la Funcion_interior y en la funcion recibe_funcion
+    print(base**valor)
 
-#Decoradores 2 Con parametros 
+suma(23,4)
+resta(12,10)
+potencia(base=5,valor=3)
