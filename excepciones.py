@@ -1,13 +1,13 @@
 # En este caso escribiria print("Divided by zero") pero si cambio por un valor divisible mostrara el resultado y print("the meaning of life")
 # y si pongo un string mostrara print("ValueError or TypeError occurred")
-try:
-    meaning = 42
-    print(meaning / 0)
-    print("the meaning of life")
-except (ValueError, TypeError):
-    print("ValueError or TypeError occurred")
-except ZeroDivisionError:
-    print("Divided by zero")
+# try:
+#     meaning = 42
+#     print(meaning / 0)
+#     print("the meaning of life")
+# except (ValueError, TypeError):
+#     print("ValueError or TypeError occurred")
+# except ZeroDivisionError:
+#     print("Divided by zero")
 
 #####################################################################################################
 
@@ -29,6 +29,7 @@ def divide(num1, num2):
         return num1/num2
     except ZeroDivisionError:
         print("No se puede dividir entre cero ")
+        return "Operacion Erronea"
 
 
 while True:  # Lo que hace este while es un bucle infinito asta que no se ingresen valores correctos osea numero enteros
@@ -39,8 +40,7 @@ while True:  # Lo que hace este while es un bucle infinito asta que no se ingres
     except ValueError:  # captura la excepcion y deja que el programa continue si hay algo mas despues
         print("Los valores introducidos no son correctos. Intentalo de de nuevo")
 
-operacion = input(
-    "Introduce la operación a realizar (suma,resta,multiplica,divide): ")
+operacion = input("Introduce la operación a realizar (suma,resta,multiplica,divide): ")
 
 if operacion == "suma":
     print(suma(op1, op2))
@@ -52,6 +52,7 @@ elif operacion == "divide":
     print(divide(op1, op2))
 else:
     print("Operación no contemplada")
+    
 print("Operación ejecutada. Continuación de ejecúción del programa ")
 
 # Tambien se puede poner un except globales sin pasarle ningun tipo de error y al momento de presentar error el programa
