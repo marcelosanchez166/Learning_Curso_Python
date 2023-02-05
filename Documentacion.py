@@ -44,26 +44,68 @@
 
 
 #Ejemplo con pruebas de codigo
-def email(mailuser):
-    """
-    Comprueba que el correo sea un correo valido, Busca un arroba @ en el string no debe estar en el final ni debe tener mas de una arroba @
-    >>> email('marcelosanchez166@gmail.com')
-    True
-    >>> email('@juanlopez.com')
-    False
-    >>> email('lopezlopez.com@')
-    False
-    >>> email('jperez.com')
-    False
-    >>> email('juan@perez@.com')
-    False
-    """
-    arroba=mailuser.count("@")
-    if (arroba !=1 or mailuser.rfind("@")==(len(mailuser)-1) or mailuser.find("@")==0):
-        return False
-    else:
-        return True
+# def email(mailuser):
+#     """
+#     Comprueba que el correo sea un correo valido, Busca un arroba @ en el string no debe estar en el final ni debe tener mas de una arroba @
+#     >>> email('marcelosanchez166@gmail.com')
+#     True
+#     >>> email('@juanlopez.com')
+#     False
+#     >>> email('lopezlopez.com@')
+#     False
+#     >>> email('jperez.com')
+#     False
+#     >>> email('juan@perez@.com')
+#     False
+#     """
+#     arroba=mailuser.count("@")
+#     if (arroba !=1 or mailuser.rfind("@")==(len(mailuser)-1) or mailuser.find("@")==0):
+#         return False
+#     else:
+#         return True
 
 
+# import doctest
+# doctest.testmod()
+
+#--------------------------Pruebas de Codigo con doctest para cuando quremos probar un bucle, sentencias anidadas etc
+
+import math 
+valores=[]
+def raizCuadrada(Listanum):
+    """Funcion devuelve una lista con la raiz cuadrada de los elementos numericos pasados por parametros en otra lista
+    >>> Lista =[4,9,16]
+    >>> Lista2=[]
+    >>> for i in Lista:
+    ...     Lista2.append(i)
+    >>> raizCuadrada(Lista2)
+    [2.0, 3.0, 4.0]
+
+    >>> Lista3=[4,-9,16]
+    >>> Lista4=[]
+    >>> for li in Lista3:
+    ...     Lista4.append(li)
+    >>> raizCuadrada(Lista4)
+    Traceback (most recent call last):
+        ...
+    ValueError: math domain error
+    """
+
+##Para esta segunda prueba se le pasa el error que esperamos y los tres puntos en medio del error indican que dentro de esas lineas hay mas codigo de error
+
+##Para Anidar expresiones en las pruebas se debe poner tres puntos como en el ejemplo de arriba en el ciclo for
+    for nums in Listanum:
+        n=math.sqrt(nums)
+        valores.append(n)
+    return valores
+
+#print(raizCuadrada([9, -16, 25, 36]))
 import doctest
 doctest.testmod()
+
+#Misma funcion solo que mas corta
+
+# def raizCuadrada(Listanum):
+#     """Funcion devuelve una lista con la raiz cuadrada de los elementos numericos pasados por parametros en otra lista
+#     """
+#     return [math.sqrt(nums)for nums in Listanum]
