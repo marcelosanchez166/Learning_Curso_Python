@@ -8,7 +8,8 @@
 #Puedes lanzar fácilmente tu proyecto con sus propios módulos dependientes.
 
 """Virtualenv
-virtualenv es una herramienta que se utiliza para crear entornos Python aislados. Crea una carpeta que contiene todos los ejecutables necesarios para usar los paquetes que necesitaría un proyecto de Python.
+virtualenv es una herramienta que se utiliza para crear entornos Python aislados. Crea una carpeta que contiene todos los ejecutables necesarios para usar los paquetes 
+que necesitaría un proyecto de Python.
 
 Puedes instalarlo con pip:
 

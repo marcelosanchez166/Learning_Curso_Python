@@ -6,7 +6,7 @@
 descuento=0.60
 Cbarras=3.49
 
-barrasV=float(input("Escriba la cantidad de barras que vendio de no son del dia "))
+barrasV=float(input("Escriba la cantidad de barras que vendio que no son del dia "))
 costo=Cbarras*barrasV
 desc=costo*descuento
 print("El costo normal de una barra es de ", Cbarras)
