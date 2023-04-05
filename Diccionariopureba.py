@@ -24,9 +24,9 @@ amigos={"josue":78221222,"Pablo":76332233,"lucas":72903322}
 """Esta función toma dos diccionarios como argumentos, crea una copia del primer diccionario y luego actualiza esta copia con las claves y valores del segundo diccionario. 
 De esta manera, si una clave aparece en ambos diccionarios, el valor del segundo diccionario sobrescribe al del primer diccionario."""
 def CombinarDiccionarios(person,amigos):
-  combined_dict = person.copy()
-  combined_dict.update(amigos)
-  return combined_dict
+    combined_dict = person.copy()
+    combined_dict.update(amigos)
+    return combined_dict
 
 print(CombinarDiccionarios(person,amigos))
 
@@ -60,7 +60,6 @@ def comprarproductos(diccproductos, presupuesto):
             else:
                 productoscomprados[producto]=1
     return productoscomprados
-          
 
 
 presupuesto=float(input("Cual es su presupesto para comprar: "))

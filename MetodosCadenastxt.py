@@ -22,10 +22,10 @@ rfind()=busca la posicicion de un caracter o una palabra desde el final
 edad=input("Ingrese su edad: ")
 
 while edad.isdigit()==False:
-          print("Por favor ingresa en numero tu edad: ")
-          edad=input("Ingrese su edad: ")
+        print("Por favor ingresa en numero tu edad: ")
+        edad=input("Ingrese su edad: ")
 
 if (int(edad)<18):
-          print("No eres mayor de edad no puede pasar ")
+        print("No eres mayor de edad no puede pasar ")
 else:
-          print("Eres mayor de edad puedes pasar ")
+        print("Eres mayor de edad puedes pasar ")
