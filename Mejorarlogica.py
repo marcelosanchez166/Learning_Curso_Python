@@ -132,3 +132,16 @@ print(Nveces(listanveces))
 
 
 # Escribir un algoritmo para invertir una lista de números.
+def invertir(listainvertida):
+    invertidalista=[]
+    longitud = len(listainvertida)-1
+    print (longitud)
+    while longitud>=0:
+        invertidalista.append(listainvertida[longitud])
+        longitud=longitud-1
+        print("hhh",longitud)
+    return invertidalista
+    
+
+listainvertida=[9,4,1,84,6]
+print(invertir(listainvertida))
