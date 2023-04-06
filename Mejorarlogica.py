@@ -132,3 +132,16 @@ print(Nveces(listanveces))
 
 
 # Escribir un algoritmo para invertir una lista de números.
+def invertir(listainvertida):
+    longitud=len(listainvertida)-1#Se le resta uno para que cuando entre la condicion del ciclo y se agregue el valor de listainvertida[longitud] a la nueva lista sea desde el ultimo indice
+    print(longitud)
+    listanueva=[]
+    while longitud>=0:
+        print("longitud dentro del ciclo ",longitud)#muestra el primer valor o el tamaño que tiene la logitud cuando entra al ciclo en este caso es 5
+        print("valor de la lista invertida dentro del ciclo ",listainvertida[longitud])#Muestra el valor que tiene lista invertida[longitud] cuando entra al ciclo que en este caso es el ultimo valor de la listainvetida
+        listanueva.append(listainvertida[longitud])#Agrega cada valor de listainvertidad[longitud] por cada pasada que hace el ciclo mientras la condicion se cumpla
+        print("valor de la lista nueva dentro del ciclo ",listanueva)#Muestra el valor que se va agregando a la nueva lista
+        longitud-=1#Decrementa en -1 el valor que tiene logitud Ej: al entrar al ciclo logitud tiene 5 cuando llega a esta linea hace 5-1=4 y vuelve a entrar al ciclo
+    return listanueva
+listainvertida=[3,5,1,6,9,2]
+print(invertir(listainvertida))
