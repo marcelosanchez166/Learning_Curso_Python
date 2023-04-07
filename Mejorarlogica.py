@@ -143,6 +143,5 @@ def invertir(listainvertida):
         print("valor de la lista nueva dentro del ciclo ",listanueva)#Muestra el valor que se va agregando a la nueva lista
         longitud-=1#Decrementa en -1 el valor que tiene logitud Ej: al entrar al ciclo logitud tiene 5 cuando llega a esta linea hace 5-1=4 y vuelve a entrar al ciclo
     return listanueva
-
 listainvertida=[3,5,1,6,9,2]
 print(invertir(listainvertida))
